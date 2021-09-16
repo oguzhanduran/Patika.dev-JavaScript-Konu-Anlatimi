@@ -1,0 +1,1 @@
+//Number veri Turu Tanımlamak
