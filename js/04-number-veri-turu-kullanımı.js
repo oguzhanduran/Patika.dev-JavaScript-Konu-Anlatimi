@@ -52,5 +52,5 @@ console.log( "Yukarı Yuvarlama :", Math.ceil (1.1) )
 //Yakına Yuvarlama İslemi -> Math.round :
 console.log( "Yakına Yuvarlama Islemi :", Math.round (1.49))
 
-    /
+   
 
