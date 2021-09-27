@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kodluyoruz Front-End 101</title>
     
-     <style>
+     <!-- <style>
          .text-primary {
              color:blue
          }
          .text-danger {
              color:red
          }
-     </style>
+     </style> -->
+     
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+     
 </head>
 <body>
     <h1 id = "greeting" >Kodluyoruz Front-End 101</h1>
@@ -57,11 +60,30 @@
 
     <h2 id="info"></h2>
 
-    <!-- 023---JS--Bolum--Sonu--Egzersizi  -->
-    <h3 id="counter">100</h3>
+    <!-- 023---JS--Bolum--Sonu--Egzersizi 
 
+    <h3 id="counter">100</h3>
+       
     <button id="increase">Arttır</button> 
-    <button id="decrease">Azalt</button>
+    <button id="decrease">Azalt</button> -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-8 offset sm-2">
+                <form id="userForm" method="GET"> <!--method olarak GET yöntemi otomatik tanımlı aslında. GET yerine POST dersek daha güvenli olabilecek bir yolla https'e dikkat ederek gönderebiliyoruz.-->
+
+                    <input type="number" name="score" id="score"> <!--burda ekranda bos alana sayı girdiğimizde input'un name'ine sayı giriyor ve ekranda gözüküyor. input Name'i eklemeseydik burda geri hiç bir sey gelmezdi ekrana, herhangi bir siteye girdiğimizde n11 gibi gene search kısmına girdiğimiz seyler yukarda görünür get ile aldıgı için-->
+                    <button class="btn btn-danger" type="reset">Reset</button>
+                    <button class="btn btn-success" type="submit">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
     <!-- <script src="js/01-hello-world.js"></script> -->
 
     <!-- <script src="js/04-number-veri-turu-kullanımı.js"></script> -->
@@ -102,8 +124,18 @@
 
     <!-- <script src="js/22-dom-etkinlikleriyle-çalışmak.js"></script> -->
 
-    <script src="js/23-fonksiyonlar-bolum-sonu-egzersizi.js"></script>
+    <!-- <script src="js/23-fonksiyonlar-bolum-sonu-egzersizi.js"></script> -->
 
+    <!-- <script src="js/24-local-storag-ile-veri-eklemek-düzenlemek-silmek.js"></script>  -->
 
+    <!-- <script src="js/25-local-storage-içersine-farklı-türde-veriler-eklemek.js"></script> -->
+
+    <!-- <script src="js/26-local-storage-bolum-egzersizi.js"></script> -->
+
+    <!-- <script src="js/27-form-ve-submit-yönetimi.js"></script> -->
+
+    <!-- <script src="js/28-input-içinden-değer-almak.js"></script> -->
+
+    <script src="js/29-formlarla-çalışmak-bölüm-sonu-egzersizi.js"></script>
 </body>
 </html>
