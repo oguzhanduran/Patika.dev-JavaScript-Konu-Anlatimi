@@ -2,7 +2,7 @@
 //document.write("Merhaba Dünya");
 
 //Uyarı Mesajı (Alert) ile Merhaba Dünya:
-alert('selam mubarek');
+alert('selamlaaar :)');
 
 //console.log ile Merhaba Dünya:
 //console.log("Merhaba Dünya")
