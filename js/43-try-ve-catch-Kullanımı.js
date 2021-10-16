@@ -32,4 +32,8 @@ console.log(info)
 
 // Bu yüzden bizim yapmamız gereken şey bir hata yönetimi belirlemek
 
-// Bu şekilde gene dışardan alacağımız bilgiler varsa try catch yapısının içine alıp hata yönetimi yapabiliriz
+// Bu şekilde gene dışardan alacağımız bilgiler varsa try catch yapısının içine alıp hata yönetimi yapabiliriz.
+
+
+
+

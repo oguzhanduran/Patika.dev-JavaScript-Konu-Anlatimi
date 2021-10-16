@@ -12,7 +12,7 @@ const helloFuncV1 = (firstName) => { console.log(`Merhaba ${firstName}`) }
 
 helloFuncV1("helloFuncV1") 
 
-const helloFuncV2 = firstName => console.log(`Merhaba ${firstName}`)      //Eğer 1 tane parametre varsa parantez koymaya gerek yok, 1 tane islem varsa süslü paranteze de ihtiyac yok.
+const helloFuncV2 = firstName => console.log(`Merhaba ${firstName}`)      //Eğer 1 tane parametre varsa parantez koymaya gerek yok, 1 tane islem varsa süslü paranteze de ihtiyac yok. Koymamalısın süslü parantez
 
 helloFuncV2("HelloFuncV2")
 
