@@ -99,4 +99,56 @@ console.log(sami) // Bunları yazdırdığımızda fullName ve surName prototype
 
 //Ben fullName methodunun prototype'ını alırım, ve constructor fonksiyonundan olusan tüm nesneler için değiştirmiş olurum. Yani fullName methodunu bir kez yazıyoruz, ve o method tüm nesneler için çalışyor.
 
-// Yani sonuc olarak anlamamız gereken biz prototype ile fullName methodunu bir kez oluşturuyoruz her nesne için ayrı method çalıştırmamıza gerek yok
+// Yani sonuc olarak anlamamız gereken biz prototype ile fullName methodunu bir kez oluşturuyoruz her nesne için ayrı method çalıştırmamıza gerek yok.
+
+
+// ****************************************************************************************
+
+// Inheritance Miras Alma Kavramı.
+
+// Bir nesnenin özelliğinin farklı nesneler tarafından kullanılabilmesine inheritance diyoruz.
+// Inheritance classlar arasındaki ilişkidede kullanılır.
+
+const Employee = {
+    name: "XXXXXXXX",
+    surName: "XXXXXXX",
+    age: "0",
+    fullName: function() {
+        return this.name + "" + this.surName
+    }
+}
+
+// Object.create yöntemiyle bir nesneyi başka bir nesneden nasıl oluşturabiliriz.
+
+const muzeyyen = Object.create(Employee) // muzeyyen nesnesini Employee nesnesinden oluşturacağımız için parantez içine Employee yazdık.
+
+console.log(muzeyyen) // consola baktıgımızda "{}" gösterdi NEDEN? çünkü tüm özellikler prototype'ın içersinde prototype'a baktıgıızda tüm özellikleri görüyoruz.
+console.log(muzeyyen.name) // Boyle yazınca console'da ismi gördüm.
+
+muzeyyen.name = "Muzeyyen"
+console.log(muzeyyen) // Böyle yaptığımızda name parametresini nesnenin içersinde görebiliyoruz çünkü artık name'i prototype'dan almıyor kendi nesnenin ismini atadığım için prototype zincirinde önce kendi özelliğinden alıyor.
+
+console.log(muzeyyen.age) // Böyle yazdığımızda sıfır gelecek çünkü Müzeyyen'in kendi age özelliği olmadığı için prototype'ına dönecek ve ondan alacak.
+
+muzeyyen.age = "55" 
+console.log(muzeyyen.age) // Ben burda muzeyyen nesnesine age'i atadığım zaman muzeyyen'in kendi age özelliği olduğu için ordan alacak.
+
+console.log(muzeyyen) // Tekrar yazdırdıgımızda age ve name propertylerini yani özelliklerini atadığımız için ekranda name ve age özelliklerini görebiliyoruz.
+
+console.log(muzeyyen.hasOwnProperty("age")) // Bu true gelir çünkü atadık.
+console.log(muzeyyen.hasOwnProperty("surName")) // Bu false gelir çünkü arin nesnesine bağlı bir surName özelliği yok. Yani surName muzeyyen nesnesinde değil onun prototype'ında.
+
+// Peki biz muzeyyen nesnesinin kendisinde veya prototyp'ında herhangi bir nesne var mı dersek onu nasıl yapabiliriz?
+
+console.log("surName" in muzeyyen) // yani surName property'si arin nesnesinde var mı dedik.
+
+// ****************************************************************************************
+
+// Sonuç
+
+// ECMA Script 5 prototype'ı inheritance yöntemini kullanarak ortak özellikleri prototype'da toplamaya çalışır, ve bir nesneyi başka bir nesneden türetmeye çalışır.
+
+// Class'larla ilgili örneklerde hep şu örnek verilir, biz bir memeli nesnesi oluşturalım onun bir özellikleri vardır, sonra inek class'ı  olustururuz onun  bir özelliği vardır. inek class'ı ne yapar o memeli class'ının özelliklerini alır.
+
+// O analojiyi kullanırsak inek class'ınını prototype'ı memeli class'ıdır. Memeli class'ının prototype'ı nedir? hayvan class'ı gibi düşünebiliriz. Öyle öyle bunların türetildiği ilk bastaki temel nesnemiz nedir gömülü Object temel nesnemizdir.
+
