@@ -1,3 +1,5 @@
+// Source: Arin Yazılım / Youtube
+
 // Object Part II, Prototype nedir?, Inheritance, Basic Object, __proto__ 
 
 // JavaScript de hemen hemen tüm nesneler başka bir nesneden türetilerek çoğalır.
