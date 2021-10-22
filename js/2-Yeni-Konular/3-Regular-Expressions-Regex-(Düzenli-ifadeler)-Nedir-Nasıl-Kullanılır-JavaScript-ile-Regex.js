@@ -63,4 +63,48 @@
 //[fchtFC5?_]at diyerek fat, cat, hat, Fat, Cat, 5at, ?at, _at'yi secebiliriz. at ortak olugu için onu dısarı yazdık farklı ortak olmayan ifadeleri ise koseli parantez içine yazdık.
 
 
-//[a-zA-Z1-9?]at  a-z ---> a'dan z'ye butun kucuk harflı karekterler dahil. A-Z ---> A'dan Z'ye butun buyuk harflı karekterler dahil. 1-9 ---> 1'den 9'a butun sayılar dahil. ?---> basında soru isareti olabilir yani ?at için bu.
+//[a-zA-Z1-9?]at  a-z ---> Köşeli parantez bizim bir aralık belirlememizi sağlar, a'dan z'ye butun kucuk harflı karekterler dahil. A-Z ---> A'dan Z'ye butun buyuk harflı karekterler dahil. 1-9 ---> 0'dan 9'a butun sayılar dahil. ?---> basında soru isareti olabilir yani ?at için bu.
+
+// gray ve grey ikisini de secmek için gra?e?y a ve e optional demis olduk böylece. Ama daha ıyı yontem gr[ae]y
+
+//reeeee şeklinde bir secım için re+ rererere seklinde bir secim icin (re)+
+
+// ^S satır basındaki ifade büyük S ise sec diyoruz ^ satır basını secmek iCin kullanılır. ^(Sokak) dersek satır basında Sokak yazısının olup olmadıgına bakar. Buyuk kucuk harf onemlidir.
+
+// Multiline flag'i ile birden cok satır varsa birden cok satırda secim yapar yani biraz onceki ^S için sadece ilk satıra bakmaz tum satırlara bakar.
+
+// Sonunda bilmem ne varsa demek için $ kullanılır. k$ demek sonunda k varsa sec anlamına gelir veya (sokak)$ sonunda sokak kelimesi varsa sec.
+
+// Sonunda nokta olup olmadıgını anlamak istiyorsak .$ yapamayız Neden? Yukardan hatırlayalım nokta herhangi bir karekteri sec demekti yani biz bunu secersek sondaki tüm karekterleri sec demis ouyoruz yani sadece satırın sonundaki karekter olması yeterli.
+
+// Peki sondaki noktayı secmek için ne yapıcaz \.$ sondaki noktayı secer.
+
+//*******************************************************************************************************************/
+
+// (Look Behind)x(Look Ahead)
+
+// (basında)x(sonunda) ---> bazen x'i secmek için basındaki ifadeyi bazen de sonundaki ifadeyi dikkate alarak x'i seceriz
+
+// Pozitif Look Ahead
+
+// Look ahead ?= şeklinde kullanılır. .(?=u) nokta herhangi bir karekter sec anlamında. Yani bunun anlamı bir karekter sec ve karekterinden hemen sonra u olsun demek. Hemen sonra u olan karekterleri secer. Bana bosluk vs getirme sadece alfenumerik karekterleri getir demek istersem. \w(?=u) demeliyiz.
+
+// Negatif Look Ahead 
+
+// Yani devamında u olmayanı bana sec demek istersem = yerine ! kullanacam yani \w(?!u) gibi düsünebiliriz. Burda devamında u varsa secmeyecek diğerlerini sececek.
+
+// Look Behind
+
+// Pozitif Look Behind
+
+// look behind için  ?<= kullanılır. (?<=q). bu sececegim karekterin oncesinde q varsa sec anlamına gelir.
+
+// Negatif Look Behind
+
+// ?<! kullanılır.  (?<!q). öncesinde q olan karekteri secme gerisini sec demektir.
+
+// (.*) her seyi al demektir.
+
+// (?<=src"=").*(?!").  ---> src"="url" url'yi secer. Aslındaki burdaki .* formuldeki x yerine geciyor.
+
+// Grup olusturmak için parantez () kullanılır.
