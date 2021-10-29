@@ -28,7 +28,7 @@
 
 // case insensitive flag'i küçük büyük harf ayrımı yapmamasını saglıyor.
 
-// global flag'i bütün yazıyı dikkate almasını sağlıyor global olmadıgında yazının eşlesen ilk kısmını alıyor.
+// /g global flag'i bütün yazıyı dikkate almasını sağlıyor global olmadıgında yazının eşlesen ilk kısmını alıyor.
 
 // "." ile ilgili bilmemiz gereken en önemli sey yeni satıra gecerse gecersız kalır.
 
@@ -63,7 +63,7 @@
 //[fchtFC5?_]at diyerek fat, cat, hat, Fat, Cat, 5at, ?at, _at'yi secebiliriz. at ortak olugu için onu dısarı yazdık farklı ortak olmayan ifadeleri ise koseli parantez içine yazdık.
 
 
-//[a-zA-Z1-9?]at  a-z ---> Köşeli parantez bizim bir aralık belirlememizi sağlar, a'dan z'ye butun kucuk harflı karekterler dahil. A-Z ---> A'dan Z'ye butun buyuk harflı karekterler dahil. 1-9 ---> 0'dan 9'a butun sayılar dahil. ?---> basında soru isareti olabilir yani ?at için bu.
+//[a-zA-Z1-9?]at  a-z ---> [] Köşeli parantez bizim bir aralık belirlememizi sağlar, a'dan z'ye butun kucuk harflı karekterler dahil. A-Z ---> A'dan Z'ye butun buyuk harflı karekterler dahil. 1-9 ---> 0'dan 9'a butun sayılar dahil. ?---> basında soru isareti olabilir yani ?at için bu.
 
 // gray ve grey ikisini de secmek için gra?e?y a ve e optional demis olduk böylece. Ama daha ıyı yontem gr[ae]y
 
@@ -75,7 +75,7 @@
 
 // Sonunda bilmem ne varsa demek için $ kullanılır. k$ demek sonunda k varsa sec anlamına gelir veya (sokak)$ sonunda sokak kelimesi varsa sec.
 
-// Sonunda nokta olup olmadıgını anlamak istiyorsak .$ yapamayız Neden? Yukardan hatırlayalım nokta herhangi bir karekteri sec demekti yani biz bunu secersek sondaki tüm karekterleri sec demis ouyoruz yani sadece satırın sonundaki karekter olması yeterli.
+// Sonunda nokta olup olmadıgını anlamak istiyorsak .$ yapamayız Neden? Yukardan hatırlayalım nokta herhangi bir karekteri sec demekti yani biz bunu secersek sondaki tüm karekterleri sec demis oluyoruz yani sadece satırın sonundaki karekter olması yeterli.
 
 // Peki sondaki noktayı secmek için ne yapıcaz \.$ sondaki noktayı secer.
 
