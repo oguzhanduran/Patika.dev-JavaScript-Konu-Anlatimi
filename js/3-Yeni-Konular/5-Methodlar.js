@@ -1,11 +1,11 @@
 // pop() Metodu
 
-// pop() metodu dizinin son elemanını siler ve dizinin yapısını değiştirir. Aynı zamanda da diziden silinen elemanı döndürür.
+// pop() metodu dizinin son elemanını siler ve dizinin yapısını değiştirir. Aynı zamanda da diziden silinen elemanı döndürür. başındaki elemanı silmek içinde shift methodunu kullanırız.
 
 let array = ["1", "2", "3"]
 let silinenArray = array.pop() 
 console.log(silinenArray) // "3"
-console.log(array) // "1" "2"
+console.log(array) // ["1","2"]
 
   //*****************************************************************************************************************/
 
@@ -82,6 +82,18 @@ var result = str.substr(6,4); // Opel
 
    /*****************************************************************************************************************/
 
+
+// String substring()
+// slice() metodun olduğu gibi substring() metoduyla başlangıç ve bitiş indeksi vererek aralıktaki karakter dizisini alabiliriz.
+
+// ** slice() metodu ile substring() metodunun farkı; substring()'^da negatif indeks kullanamıyoruz.
+
+var str = "Mazda,Opel,Toyota";
+var result = str.slice(6, 10); // Opel
+** slice() metodunda olduğu gibi bitiş indeksini vermezsek sona kadar alır.
+
+   /*****************************************************************************************************************/
+
   //toString()
 
   // toString() metodu, kendisine tanımlanan değişken değerini string olarak değiştirerek döndürür.
@@ -102,33 +114,51 @@ var sayi	=	22;
 var cikti	=	sayi.toString(2);
 console.log(cikti) // "10110"
 
- 
-// Sorular
+   /*****************************************************************************************************************/
 
-// Time Convert
-// Have the function TimeConvert(num) take the num parameter being passed and return the number of hours and minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). Separate the number of hours and minutes with a colon.
-// Examples
-// Input: 126
-// Output: 2:6
-// Input: 45
-// Output: 0:45
- 
-function TimeConvert(num) { 
+  //  abs() metodu
 
-  // code goes here  
-return Math.floor(num / 60) + ':' + (num % 60)
+  // abs() metodu, kendisine verilen sayı değerinin mutlak sayı değerini bulur.
 
-  
+  let negatifSayı = -10
+  console.log(Math.abs(negatifSayı)) // 10
 
-}
+
+   /*****************************************************************************************************************/
+
+  //  repeat() Metodu
    
-// keep this function call here 
-console.log(TimeConvert(readline()));
+//   Javascript programlamda kullanılan repeat() metodu bir karakter dizisinin kopyalanmasını sağlayan bir yerleşik metottur.
 
-Triangle Row
-Have the function TriangleRow(num) take num which will be a positive integer representing some row from Pascal's triangle. Pascal's triangle starts with a [1] at the 0th row of the triangle. Then the first row is [1, 1] and the second row is [1, 2, 1]. The next row begins with 1 and ends with 1, and the inside of the row is determined by adding the k-1 and kth elements from the previous row. The next row in the triangle would then be [1, 3, 3, 1], and so on. The input will be some positive integer and your goal is to return the sum of that row. For example: if num is 4 then your program should return the sum of 1 + 4 + 6 + 4 + 1 which is 16.
-Examples
-Input: 1
-Output: 2
-Input: 2
-Output: 4
+// Kopyalama sırasında stringleri direkt olarak bitişik şekilde yazar.
+
+var metin = 'Merhaba'
+console.log(metin.repeat(7))
+
+// Output: MerhabaMerhabaMerhabaMerhabaMerhabaMerhabaMerhaba
+
+   /*****************************************************************************************************************/
+  //  String.prototype.(padStart/padEnd)
+
+  //  String belli bir karaktere kadar tamamlamanızı sağlar.
+  //  boş karakterle mi / belli bir örüntü ile mi tamamlanacak.
+  //  padStart/padEnd: doldurma işleminin başa mı/ sona mı ekleneceğini
+
+   console.log('abcd'.padStart(4));  //'abcd'
+   console.log('abcd'.padStart(8));  //'    abcd'
+   console.log('abcd'.padStart(12)); //'        abcd'
+   console.log('abcd'.padStart(12,'xyz')); //'xyzxyzxyabcd'
+   console.log('abcd'.padEnd(12)); //'abcd        '
+   console.log('abcd'.padEnd(8));  //'abcd    '
+   console.log('abcd'.padEnd(4));  //'abcd'
+   console.log('abcd'.padStart(12,'xy')); 'xyxyxyxyabcd'
+
+   console.log("Fenerbahçe".padStart(50))  // "                                        Fenerbahçe"
+   console.log("Fenerbahçe".padEnd(50)) // "Fenerbahçe                                        "
+
+      /**************************************************************************************************************/
+      
+
+     
+
+      
