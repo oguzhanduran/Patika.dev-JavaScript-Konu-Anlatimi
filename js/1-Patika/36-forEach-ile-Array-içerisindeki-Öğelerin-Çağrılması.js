@@ -55,3 +55,28 @@ PRODUCTS.forEach((item) => { // Burda product yerine item yazdık ki bu ismi biz
 //Böylelikle for döngüsüyle yaptıgımız yapıyı forEach ile birlikte tek seferde kurgulayabiliriz. 
 
 //forEach bir array içinde kullanılıyor ama biz forEach'i illa bir array içinde kullanmak zorunda değiliz
+
+//Başka öRNEK
+
+//for ile
+var numbers = [1, 2, 3, 4, 5];
+
+var sum = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+  sum += numbers[i];
+}
+
+console.log(sum);//15
+
+//forEach ile
+
+var numbers = [1, 2, 3, 4, 5];
+
+var sum = 0;
+
+numbers.forEach(number => sum += number);
+
+
+console.log(sum); //15
+

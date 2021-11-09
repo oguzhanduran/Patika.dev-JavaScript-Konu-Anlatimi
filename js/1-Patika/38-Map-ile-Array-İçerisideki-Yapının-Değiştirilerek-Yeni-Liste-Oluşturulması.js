@@ -19,7 +19,10 @@ const USERS = ["AYSE", "mehMET", "TugCE", "AySEL"]
 
 const NEW_USERS = USERS.map( user => user.toLowerCase() ) // fat arrow ile "=>" biz user'ın bir fonksiyon oldugunu belirttik aslında.
 
-console.log(NEW_USERS) //append gibi işlemlerden kurtulup direk yeni bir liste haline getirdik.
+console.log(NEW_USERS) // ["ayse","mehmet","tugce","aysel"]
+
+
+//append gibi işlemlerden kurtulup direk yeni bir liste haline getirdik.
 
 //userName içinde orjinal isim kalsın,
 //shortName içinde ilk harf büyük .(A.)
