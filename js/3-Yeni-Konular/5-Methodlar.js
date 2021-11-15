@@ -158,7 +158,141 @@ console.log(metin.repeat(7))
 
       /**************************************************************************************************************/
       
-
+// .reduce()
   
+// azalmak küçülmek demek ve tam olarakta bu işlemi yapıyor. reduce dizideki tüm öğelerimizi önce bir işlevden geçiriyor ve sonunda diziyi tek bir değere düşürüyor. yani sayılardan oluşan bir dizimiz olsun reduce kullandığımızda son hali bu dizilerin toplamı diziyi küçülte küçülte en sonda değerlerin toplamını döndürüyor.
+
+// normalde toplamayı nasıl yapıyoruz;
+
+const numbers = [1, 2, 3, 5]
+
+let total = 0;
+numbers.forEach((number) => total += number);
+console.log(total); // 11
+
+// reduce temelde 2 tane zorunlu 2 tane opsiyonel parametre alıyor.
+//1. parametre = accumulator = her döngüden çıkan sonucun toplandığı değer dizi ise dizi string ise string sayı ise sayıdır. yukarıdaki total'e karşılık gelir ama genelde acc şeklinde görürsünüz.
+//2. parametre = current value = o an işlem yaptığımız öğemiz,yani dizideki her bir değeri temsil eder current value, item, number diyebiliriz tamamen bize kalmış biz number dedik. 
+//3. parametre = index = sırası gelen değerin dizideki konumu 
+//4. parametre = source array = üzerinde reduce uyguladığımız dizi
+
+let total2 = numbers.reduce(function(acc, number) {
+  return acc + number
+
+}); 
+
+console.log(total2); // 11
+
+//function ekleyerek callback fonksiyonu haline getirdik.
+
+let total2 = numbers.reduce(function(acc, number) {
+  return acc + number
+
+},5); 
+
+console.log(total2); // 16
+
+// en sonda süslü parantezden sonra 5 yazarak bir başlangıç değeri atadık.
+
+//istersek bunu arrow function şeklindede yazabiliriz;
+
+let total3 = numbers.reduce((acc, number) => acc + number, 5)
+
+console.log(total3) //16
+
+// Nesne değerlerinin toplamını bulmak ile ilgili farklı bir örnek deneyelim. 
+
+const basket = [
+  {
+  name: "iphone 8",
+  price: 7000,
+}, 
+{
+  name:"Apple Macbook Pro",
+  price: 14000,
+}, 
+{
+  name: "Harman/ Kardon", 
+  price: 2500,
+}
+]
+
+// let sum = basket.reduce((acc, item) =>  acc + item.price )// Böyle yazarsam işe yaramaz çünkü bir başlangıç değeri vermem gerekiyor.
+
+let sum = basket.reduce((acc, item) =>  acc + item.price, 0)
+console.log(sum); //23500
+
+
+const names = ["Tayfun", "Mehmet", "Ahmet", "Gökhan", "Tayfun" ]
+
+// Dizide aynı isimden kaç tane var onu hesaplatalım.
+
+let countedNames = names.reduce((allNames, name) => {
+if (name in allNames) {
+  allNames[name]++
+}else {
+  allNames[name] = 1;
+}
+return allNames
+}, {})
+
+console.log(countedNames); //{"Tayfun": 2, "Mehmet": 1, "Ahmet": 1, "Gökhan": 1}
+
+
+
+
+
+// Başlangıç değeri olarak boş bir obje "{}" verdik. Çünkü objeme atıcam örneğin objemin name'i Tayfun olacak values'ide 2 olacak gibi. 
+
+// Benim toplayıcı objemde yani allNames'de daha önce Tayfun Mehmet vs gibi isimler atanmış mı onu kontrol etmem lazım bunu in operatörü ile kontrol ettik.
+
+// 2. Tayfun'a gelene kadar hep else blogu calışcak.
+
+
+const products = [
+  {
+    name: "Iphone 8",
+    brand: "Apple",
+  }, 
+  { 
+    name: "Iphone 5",
+    brand: "Apple",
+
+  }, 
+  {
+    name: "S7",
+    brand: "Samsung",
+  },
+  {
+    name: "J50",
+    brand: "Lenovo"
+  }
+]
+
+let group = "brand"
+
+let groupedProducts = products.reduce((acc, product) => {
+  let key = product[group] // ilk nesne için Apple atandı.
+  if(!acc[key]) { // yani burda dedik ki daha önce o markadan acc'nin içine atanmamışşsa yeni bir marka dizisi olustur.
+    acc[key] = []
+  }
+  acc[key].push(product) // olusturulan diziye ürünü ekledik push ettik.
+  return acc
+}, {}) // Başlangıç değeri olarak boş bir obje
+
+console.log(groupedProducts); // Sonuç doğru
+
+
+
+
+
+
+
+
+ 
+
+
+
+
 
       
