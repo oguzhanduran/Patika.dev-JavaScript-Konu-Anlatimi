@@ -82,3 +82,19 @@ for (x of text) {
 
 // t
 
+// for (const değişken of dizi) döngüsü ile dizinin içinde bir elemandan kaç tanem olduğunu hesaplama.
+
+let a = [1, 1, 1, 1, 2, 2]
+let b = [0, 0, 0, 0, 0, 0]
+
+for (const i of a) {
+  b[i]++
+  console.log(b[i])
+}
+
+// 1
+// 2
+// 3
+// 4-4tane 1 var demek her defasında sayıyor.
+// 1
+// 2-2 tane 2 var demek

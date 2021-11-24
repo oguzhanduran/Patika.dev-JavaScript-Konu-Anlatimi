@@ -282,6 +282,62 @@ let groupedProducts = products.reduce((acc, product) => {
 
 console.log(groupedProducts); // Sonuç doğru
 
+/**************************************************************************************************************/
+
+// parseFloat() methodu
+
+// parseFloat() metodu, kendisine parametre olarak verilen değerlere göre verilen değerleri ondalıklı sayı haline dönüştürür ve yeni bir değişken oluşturarak geri döndürür. Artı, eksi, nokta haricinde bir değer gördüğünde işlemi durdurur. Girilen değerin veri türü ne olursa olsun number veri türüne dönüşür. Ancak girilen değer kabul ettiği değerler haricinde olursa NaN sonucunu verir.
+
+    var sayi1	=	22;
+		var sayi2	=	"22";
+		var sayi3	=	-30;
+		var sayi4	=	"+239";
+		var sayi5	=	"Sayı 5";
+		var sayi6	=	"5 6 7 8 9";
+		var sayi7	=	13.27;
+		
+		var cikti1	=	parseFloat(sayi1);
+		var cikti2	=	parseFloat(sayi2);
+		var cikti3	=	parseFloat(sayi3);
+		var cikti4	=	parseFloat(sayi4);
+		var cikti5	=	parseFloat(sayi5);
+		var cikti6	=	parseFloat(sayi6);
+		var cikti7	=	parseFloat(sayi7);
+
+// sayi1 : 22
+// sayi1 veri türü : number
+// cikti1 : 22
+// cikti1 veri türü : number
+
+// sayi2 : 22
+// sayi2 veri türü : string
+// cikti2 : 22
+// cikti2 veri türü : number
+
+// sayi3 : -30
+// sayi3 veri türü : number
+// cikti3 : -30
+// cikti3 veri türü : number
+
+// sayi4 : +239
+// sayi4 veri türü : string
+// cikti4 : 239
+// cikti4 veri türü : number
+
+// sayi5 : Sayı 5
+// sayi5 veri türü : string
+// cikti5 : NaN
+// cikti5 veri türü : number
+
+// sayi6 : 5 6 7 8 9
+// sayi6 veri türü : string
+// cikti6 : 5
+// cikti6 veri türü : number
+
+// sayi7 : 13.27
+// sayi7 veri türü : number
+// cikti7 : 13.27
+// cikti7 veri türü : number
 
 
 
