@@ -339,6 +339,26 @@ console.log(groupedProducts); // Sonuç doğru
 // cikti7 : 13.27
 // cikti7 veri türü : number
 
+/**************************************************************************************************************/
+
+// .split()
+
+// split türkçede bölmek manasına gelir. split() metodu verilen bir stringi(metin) diziye dönüştürür ve bu diziyi döndürür. Bölme işlemini istediğimiz karaktere(seperator) göre yapabiliriz. 
+
+// Syntax
+// string.split(separator,limit)
+// seperator: verilen stringi diziye bölerken hangi karakter kullanacağımızı belirttiğimiz parametredir. Opsiyonel bir parametredir. Yani boş bırakılabilir. Eğer boş bırakırsak bütün string tek bir dizi elemanı haline getirilerek dizi oluşturulur. 
+// limit: Opsiyonel bir parametredir yani boş bırakılabilir. Buraya yazacağımız değer bir tamsayı olmalıdır. Bu değer kaç tane bölüm oluşturacağımızı gösterir. Bir şekilde yeni oluşturduğumuz dizinin eleman sayısını da temsil eder.
+
+// var metin = ["Üzeyir Ali eve geldi mi?"];
+// var sonuc1 = metin.split(" ");   // ["Üzeyir","Ali","eve","geldi","mi?"]
+// var sonuc2 = metin.split("");    // ["Ü","z","y","i","r"," ", "A", "l", "i"," ", "e", "v", "e"," ","g","e","l","d","i", " " ,"m","i","?"]
+// var sonuc3 = metin.split(" ",3); // ["Üzeyir","Ali","eve"]
+// var sonuc4 = metin.split("i");   // [Üzey,r Al, eve geld, m,?]
+
+// Dikkat: Hangi karekteri yazarsak o karakterden itibaren bölüyor mesela en üstte boşluk koyduk seperator yerine ve sadece boşluklara virgul koydu, altına bosluk koymadık o yuzden tüm bitişik olanları virgul ile ayırdı. Yani seperator yerine ne yazarsak onu baz alarak ayırıyor.
+
+/**************************************************************************************************************/
 
 
 
