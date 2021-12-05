@@ -359,6 +359,25 @@ console.log(groupedProducts); // Sonuç doğru
 // Dikkat: Hangi karekteri yazarsak o karakterden itibaren bölüyor mesela en üstte boşluk koyduk seperator yerine ve sadece boşluklara virgul koydu, altına bosluk koymadık o yuzden tüm bitişik olanları virgul ile ayırdı. Yani seperator yerine ne yazarsak onu baz alarak ayırıyor.
 
 /**************************************************************************************************************/
+// charCodeAt()
+// Bu metod,bir dizgenin indexine ait karekterin unicode değerini belirten bir sayı döndürür. 
+
+let str = "ABC"
+var a = str.charCodeAt(0);
+console.log(a) // 65, küçük a olsaydı 97 olurdu.
+
+/**************************************************************************************************************/
+
+// String.fromCharCode()
+// Unicode değerinden oluşan yeni bir dizge döndürür.
+
+let a = String.fromCharCode(97)
+console.log(a) // "a" 
+
+let a = String.fromCharCode(65)
+console.log(a) // "A" 
+/**************************************************************************************************************/
+
 
 
 
