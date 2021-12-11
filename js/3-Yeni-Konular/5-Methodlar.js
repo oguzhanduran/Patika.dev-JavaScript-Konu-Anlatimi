@@ -378,6 +378,43 @@ let a = String.fromCharCode(65)
 console.log(a) // "A" 
 /**************************************************************************************************************/
 
+// eval() Methodu
+
+// Javascript'te kullanılan eval() fonksiyonunun temel işlevi kendisine verilen parametre/değişken/içerikleri bir javascript kodu olarak çalıştırmaktır. Eğer bir ifadeyi eval() fonksiyonu içerisinde kullanırsanız bu ifade bir javascript kodu olarak algılanacak ve buna göre çalıştırılacaktır.
+
+// Söz Dizimi/Syntax şöyledir:
+
+// eval(ifade)  
+
+// eval metodunun aldığı karakter dizisi parametresi bir JavaScript deyimini (komutu, fonksiyonu, nesnesi, özelliği vs. ) ifade ediyorsa JavaScript kodlarına çevrilip çalıştırılır. Eğer karakter dizisi bir veya daha fazla operatör kodunu içeriyorsa operatörün işlemi gerçekleştirilir. Bu yüzden özellikle matematiksel işlemleri içeren/ifade eden karakter dizileri kullanılmamalıdır. eval otomatik olarak matematiksel işlemi gerçekleştirecektir.
+
+let a = "3 * 4";
+console.log(a) // "3 * 4"
+
+let a = "3 * 4";
+console.log(eval(a)); // 12 Yani matematiksel işlemleri otomatik olarak yapar.
+
+/**************************************************************************************************************/
+
+// splice() methodu
+
+// Splice metodunu genel olarak diziden eleman silmek istediğimizde kullanırız, bazen diziye eleman eklemek istediğimizde de kullanabiliriz.
+
+// Splice, belirtilen index değerinden sonra silinecek elemanları belirlemek için kullanılır.
+
+// Yani, ilk parametre silinecek index’in yerini, ikinci parametre ise index’ten sonra kaç elemanın silineceğini belirtir.
+
+var sayilar = ["sıfır", "bir", "iki", "üç", "dört"];
+sayilar.splice(2)
+console.log(sayılar) // ["sıfır", "bir"]
+
+var sayilar = ["sıfır", "bir", "iki", "üç", "dört"];
+sayilar.splice(1,2)
+console.log(sayilar) // ["sıfır", "üç", "dört"]
+
+var sayilar = ["sıfır", "bir", "iki", "üç", "dört"];
+sayilar.splice(2, 0, "beş")
+console.log(sayilar) // ["sıfır","bir","beş","iki","üç","dört"]
 
 
 
